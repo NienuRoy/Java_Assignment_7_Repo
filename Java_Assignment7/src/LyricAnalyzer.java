@@ -51,14 +51,13 @@ public class LyricAnalyzer {
 		Set<String> keys = map.keySet();
 		for(String key : keys){
 			for(Integer v1 : map.get(key)){
-					if(v1>0){
-						words[v1]= key +"";
-					}
-					else
-					{
-						words[-v1] = key +"\n";
-					}
-				
+				if(v1>0){
+					words[v1]= key +"";
+				}
+				else
+				{
+					words[-v1] = key +"\n";
+				}
 			}
 		}
 		for(int i =0;i<words.length;i++){
