@@ -72,7 +72,7 @@ public class LyricAnalyzer {
 				arr.add(entry.getKey());
 			}
 		}
-		return arr.size();   //Or simply do map.size - keys will be unique in map
+		return arr.size();   //Or simply do map.size() - keys will be unique in map
 	}
 
 	public static String mostFrequentWord(HashMap<String, ArrayList<Integer>> map) {
