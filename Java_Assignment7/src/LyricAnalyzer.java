@@ -9,9 +9,6 @@ for this assignment is 15 Mach 2017.
 import java.io.*;
 import java.util.*;
 import java.util.Map.Entry;
-import java.util.stream.Collectors;
-
-import javax.swing.plaf.synth.SynthSpinnerUI;
 
 public class LyricAnalyzer {
 
@@ -41,10 +38,12 @@ public class LyricAnalyzer {
 	}
 
 	public static void displayLyrics(HashMap<String, ArrayList<Integer>> map) {
+		
 		int length = 0;
 		for(ArrayList<Integer> value: map.values()){
 			length +=value.size();
 		}
+		
 		String[] words = new String[length+1];
 		Arrays.fill(words, "");
 
@@ -52,7 +51,7 @@ public class LyricAnalyzer {
 		for(String key : keys){
 			for(Integer v1 : map.get(key)){
 				if(v1>0){
-					words[v1]= key +"";
+					words[v1]= key +" ";
 				}
 				else
 				{
@@ -60,8 +59,8 @@ public class LyricAnalyzer {
 				}
 			}
 		}
-		for(int i =0;i<words.length;i++){
-			System.out.print(words[i] +" ");
+		for(int i =1;i<words.length;i++){
+			System.out.print(words[i]); //Printing lyrics 
 		}
 	} 
 
@@ -73,7 +72,7 @@ public class LyricAnalyzer {
 				arr.add(entry.getKey());
 			}
 		}
-		return arr.size();
+		return arr.size();   //Or simply do map.size - keys will be unique in map
 	}
 
 	public static String mostFrequentWord(HashMap<String, ArrayList<Integer>> map) {
