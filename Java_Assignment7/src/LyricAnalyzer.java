@@ -40,13 +40,12 @@ public class LyricAnalyzer {
 				}
 			}
 		}
-	
 
 	public static void displayLyrics(HashMap<String, ArrayList<Integer>> map) {
 		
 		int length = 0;
 		for(ArrayList<Integer> value: map.values()){
-			length +=value.size();
+			length +=value.size();	//Finding the total number of elements in the arraylist(values) for the whole lyrics length
 		}
 		
 		String[] words = new String[length+1];
