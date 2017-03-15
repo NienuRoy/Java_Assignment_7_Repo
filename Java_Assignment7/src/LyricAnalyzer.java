@@ -30,12 +30,17 @@ public class LyricAnalyzer {
 		for(String word: keys){
 			System.out.print(word +": ");
 			Object[] value = map.get(word).toArray();
-			for(Object values : value){
-				System.out.print(values +" ");
+				for(int i=0;i<value.length;i++){
+					if(i!=value.length-1){
+						System.out.print(value[i] +",");
+					}
+					else{
+						System.out.println(value[i]);
+					}
+				}
 			}
-			System.out.println();
 		}
-	}
+	
 
 	public static void displayLyrics(HashMap<String, ArrayList<Integer>> map) {
 		
